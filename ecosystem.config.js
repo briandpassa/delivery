@@ -6,7 +6,7 @@ module.exports = {
   deploy: {
     production: {
       user: 'ubuntu',
-      host: 'ec2-54-255-221-185.ap-southeast-1.compute.amazonaws.com',
+      host: 'ec2-52-220-246-159.ap-southeast-1.compute.amazonaws.com',
       key: '~/.ssh/deliveryAyampresident.pem',
       ref: 'origin/master',
       repo: 'git@github.com:briandpassa/delivery.git',
