@@ -9,7 +9,7 @@ import EachItem from "../eachItem";
 const EachCategory = ({ categoryName, items }) => (
   <Flexbox flexDirection="column">
     <Flexbox flexDirection="column" className="AllContainer">
-      <Flexbox element="header" className="CategoryContainer">
+      <Flexbox element="header" className="CategoryContainer" justifyContent="center">
         {categoryName}
       </Flexbox>
 
