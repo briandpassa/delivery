@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     name: 'ayampresident',
-    script: './src/index.js'
+    script: 'index.js'
   }],
   deploy: {
     production: {
