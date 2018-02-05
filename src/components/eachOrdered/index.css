@@ -1,0 +1,22 @@
+
+.eachOrderContainer{
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  background-color: white;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.eachOrderBox {
+  border-bottom: 1px solid #efefef;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.eachOrder {
+  color: #666666;
+}
+
+.eachChoices {
+  font-size: 80%;
+}

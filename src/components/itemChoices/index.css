@@ -1,0 +1,36 @@
+.choiceContainer {
+  border-top: 1px solid #cccccc;
+  background-color: #dddddd;
+  padding-top: 5px;
+}
+
+.choiceHeader {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.headerText {
+  padding: 5px;
+  padding-left: 10px;
+  color: #444444;
+  font-size: 80%;
+}
+
+.requiredText {
+  font-size: 75%;
+  background-color: #D75A4A;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  color: #eeeeee;
+  border: 0px solid #dddddd;
+  border-radius: 1px;
+}
+
+.choiceListContainer {
+  margin-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #ffffff;
+}

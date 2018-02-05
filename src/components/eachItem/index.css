@@ -1,0 +1,45 @@
+
+.ItemContainer {
+  margin: 1px;
+  background-color: #efefef;
+}
+
+.ImagePlaceholder {
+  position: relative;
+}
+
+@media screen and (max-width: 699px){
+    .smallDevicesText {
+      font-size:75%;
+    }
+}
+.itemText{
+/*  font-size:75%;*/
+  padding: 5px;
+  color: #666666;
+}
+
+.itemTextName {
+  padding-right: 4px;
+}
+.itemTextPrice {
+}
+
+.Image {
+  position: absolute;
+  bottom: 0; top:0;left:0;right: 0;
+}
+
+.NoOfOrder {
+  position: absolute;
+  top:0;right: 0;
+  background-color: #43B05C;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 5;
+  color: white;
+}

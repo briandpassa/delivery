@@ -1,0 +1,18 @@
+.AllContainer {
+}
+
+.Header {
+  text-align: center;
+}
+
+.Body {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+}
+
+.CategoryContainer {
+  margin-top: 15px;
+  padding-left: 2px;
+  color: #666666;
+}

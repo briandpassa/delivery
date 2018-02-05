@@ -1,0 +1,23 @@
+.EachChoiceContainer {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #efefef;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.EachChoiceTextContainer {
+  width: 100%;
+  color: #444444;
+}
+
+.EachChoiceText {
+  padding-left: 10px;
+  background-color: transparent;
+  color: #666666;
+}
+
+.EachChoiceTextSelected {
+  background-color: transparent;
+  padding-left: 10px;
+  font-weight: bold;
+}

@@ -1,0 +1,95 @@
+.ViewCartItemContainer{
+  margin-top: 70px;
+}
+
+.RecommendationContainer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 5px;
+  padding-left: 5px;
+  background-color: white;
+}
+
+.RecommendationText {
+  color: #666666;
+  padding-bottom: 10px;
+  font-size: 80%;
+}
+
+.deliveryTimeContainer {
+  margin-top: 10px;
+  padding: 15px 10px ;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+
+}
+
+.mapContainer {
+  padding: 10px;
+  height: 130px;
+  width: 130px;
+}
+
+.mapMarker {
+  margin-top: -36px;
+  margin-left: -19px;
+}
+
+.addressContainer {
+  padding: 10px;
+}
+
+.addressTextHeader {
+  padding-bottom: 20px;
+}
+.addressText {
+  color: #444444;
+  font-size: 80%;
+}
+
+a[href^="http://maps.google.com/maps"],
+a[href^="https://maps.google.com/maps"],
+a[href^="https://www.google.com/maps"] {
+    display: none !important;
+}
+.gmnoprint:not(.gm-bundled-control) {
+    display: none;
+}
+.gm-bundled-control .gmnoprint {
+    display: block;
+}
+
+.ViewCartHeader {
+  position: fixed;
+  top: 20; left: 0; right: 0;
+  background-color: white;
+  z-index: 15;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.viewChartFooter {
+  background-color: transparent;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 10;
+}
+
+.viewChart {
+  margin: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #43B05C;
+  border-radius : 3px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.viewChartText {
+  color: white;
+}
+.spacer {
+  background-color: white;
+  padding-top: 200px;
+}
+

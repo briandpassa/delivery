@@ -1,0 +1,25 @@
+.sectionContainer {
+  background-color: #dddddd;
+  color: #444444;
+  border-top: 1px solid #cccccc;
+}
+
+.sectionHeader {
+  padding: 10px;
+  font-size: 80%;
+}
+
+.orderTotalContainer {
+  background-color: white;
+  padding: 20px;
+}
+
+
+.totalText {
+  color: #666666;
+  font-size: 80%;
+}
+
+.grandTotalText{
+  padding-top: 5px;
+}
