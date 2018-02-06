@@ -2,13 +2,13 @@ import React from 'react'
 import Flexbox from 'flexbox-react';
 import './index.css'
 import PropTypes from 'prop-types'
-import { onOrderItemSelected } from '../../modules/activeItem'
+//import { onOrderItemSelected } from '../../modules/activeItem'
 import { orderTotalSelector } from '../../selectors'
 
 import EachOrdered from "../eachOrdered";
 
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'
+//import { bindActionCreators } from 'redux'
 
 class OrderedList extends React.Component {
 
@@ -76,11 +76,11 @@ const mapStateToProps = state => ({
   orderTotal: orderTotalSelector(state),
 })
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  onOrderItemSelected,
-}, dispatch)
+//const mapDispatchToProps = dispatch => bindActionCreators({
+//  onOrderItemSelected,
+//}, dispatch)
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+//  mapDispatchToProps,
 )(OrderedList)

@@ -29,7 +29,7 @@ const ItemView = ({ onAddOrder, onIncreaseQuantity, onReduceQuantity, onBackToMe
         activeItem.choice? activeItem.choice.map((choice, index) => <ItemChoices choiceName={choice.choiceName} isRequired = {choice.isRequired} choicesList={choice.choicesList} choiceGroupIndex={index} key={index}/>) : null
       }
       <SpecialRequest/>
-      <OrderedList/>
+      <OrderedList onOrderItemSelected={()=>null}/>
       <Flexbox className="spacer">
       </Flexbox>
     </Flexbox>

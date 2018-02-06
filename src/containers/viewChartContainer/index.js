@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux'
 import { onItemClick, onViewChart, onOrderItemSelected } from '../../modules/activeItem'
 import { goBack } from 'react-router-redux'
 import { withWindow, withScroll } from 'react-window-decorators';
-import { orderTotalSelectorTotal, GetRecomendedItemSelector } from '../../selectors'
+import { GetRecomendedItemSelector } from '../../selectors'
 
 
 class ViewCartContainer extends React.Component {
@@ -16,19 +16,17 @@ class ViewCartContainer extends React.Component {
 
 
   render() {
-    const { onOrderItemSelected, onViewChart, onHeaderClose, onItemClick, orderedList, deliveryTime, deliveryAddress, orderTotal, recomendedItem } = this.props;
+    const { onOrderItemSelected, onViewChart, onHeaderClose, onItemClick, deliveryTime, deliveryAddress, recomendedItem } = this.props;
 
     return (
-      <ViewCart onOrderItemSelected={onOrderItemSelected} onViewChart={onViewChart} onHeaderClose={onHeaderClose} onItemClick={onItemClick} orderedList={orderedList} orderTotal={orderTotal} recomendedItem={recomendedItem} address={deliveryAddress.address} deliveryTime={deliveryTime} latLang={deliveryAddress.latLang}/>
+      <ViewCart onOrderItemSelected={onOrderItemSelected} onViewChart={onViewChart} onHeaderClose={onHeaderClose} onItemClick={onItemClick} recomendedItem={recomendedItem} address={deliveryAddress.address} deliveryTime={deliveryTime} latLang={deliveryAddress.latLang}/>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  orderedList: state.orderedList,
   deliveryTime: state.deliveryTime,
   deliveryAddress: state.deliveryAddress,
-  orderTotal: orderTotalSelectorTotal(state),
   recomendedItem: GetRecomendedItemSelector(state),
 })
 

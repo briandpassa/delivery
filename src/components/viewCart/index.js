@@ -12,14 +12,14 @@ import EachItem from "../eachItem";
 import PreventDoubleTapZoomButton from "../preventDoubleTapZoomButton";
 
 
-const ViewCart = ({ onViewChart, onHeaderClose, onItemClick, address, latLang, deliveryTime, recomendedItem }) => (
+const ViewCart = ({ onOrderItemSelected, onViewChart, onHeaderClose, onItemClick, address, latLang, deliveryTime, recomendedItem }) => (
   <Flexbox flexDirection="column" className="AllContainer">
     <HeaderBlack onHeaderClose={onHeaderClose}/>
     <Flexbox  flexDirection="column" className="ViewCartItemContainer">
       <DeliveryAddress address={address} latLang = {latLang}/>
       <DeliveryTime deliveryTime={deliveryTime}/>
       <Recomendation items={recomendedItem}/>
-      <OrderedList/>
+      <OrderedList onOrderItemSelected={onOrderItemSelected}/>
       <Flexbox className="spacer">
       </Flexbox>
     </Flexbox>
@@ -28,6 +28,7 @@ const ViewCart = ({ onViewChart, onHeaderClose, onItemClick, address, latLang, d
 )
 
 ViewCart.propTypes = {
+  onOrderItemSelected: PropTypes.func.isRequired,
   onViewChart: PropTypes.func.isRequired,
   onHeaderClose: PropTypes.func.isRequired,
   onItemClick: PropTypes.func.isRequired,
@@ -36,6 +37,7 @@ ViewCart.propTypes = {
   deliveryTime: PropTypes.string.isRequired,
   recomendedItem: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
 }
+
 
 const HeaderBlack = ({ onHeaderClose }) => (
   <Flexbox className="ViewCartHeader" justifyContent="space-between">

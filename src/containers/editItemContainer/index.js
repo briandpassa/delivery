@@ -4,7 +4,7 @@ import { withWindow, withScroll } from 'react-window-decorators';
 import { connect } from 'react-redux'
 import { goBack } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
-import { onOrderItemSelected, onIncreaseQuantity, onReduceQuantity, onResetQuantity } from '../../modules/activeItem'
+import { onIncreaseQuantity, onReduceQuantity, onResetQuantity } from '../../modules/activeItem'
 import { onUpdateOrder, onRemoveOrder } from '../../modules/orderedList'
 
 class EditItemContainer extends React.Component {
@@ -13,9 +13,9 @@ class EditItemContainer extends React.Component {
   }
 
   render() {
-    const { onResetQuantity, onRemoveOrder, onUpdateOrder, onIncreaseQuantity, onReduceQuantity, onOrderItemSelected, onHeaderClose, scrollPosition, dimensions, activeItem } = this.props;
+    const { onResetQuantity, onRemoveOrder, onUpdateOrder, onIncreaseQuantity, onReduceQuantity, onHeaderClose, scrollPosition, dimensions, activeItem } = this.props;
     return (
-      <EditItem onResetQuantity={onResetQuantity} onRemoveOrder={onRemoveOrder} onUpdateOrder={onUpdateOrder} onIncreaseQuantity={onIncreaseQuantity} onReduceQuantity={onReduceQuantity} onOrderItemSelected={onOrderItemSelected} onHeaderClose={onHeaderClose} scrollPosition={scrollPosition} width={dimensions.width} activeItem = {activeItem}/>
+      <EditItem onResetQuantity={onResetQuantity} onRemoveOrder={onRemoveOrder} onUpdateOrder={onUpdateOrder} onIncreaseQuantity={onIncreaseQuantity} onReduceQuantity={onReduceQuantity} onHeaderClose={onHeaderClose} scrollPosition={scrollPosition} width={dimensions.width} activeItem = {activeItem}/>
     );
   }
 }
@@ -26,7 +26,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   onHeaderClose: () => goBack(),
-  onOrderItemSelected,
   onIncreaseQuantity,
   onReduceQuantity,
   onUpdateOrder,

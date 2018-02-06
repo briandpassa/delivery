@@ -57,6 +57,7 @@ EditItem.propTypes = {
   }).isRequired,
 }
 
+
 const CurrentOrder = ({ ordered }) => (
   <Flexbox  className="eachOrderContainer" flexGrow={1} flexDirection="column">
     <Flexbox className="eachOrderBox" flexGrow={1} flexDirection="column">
