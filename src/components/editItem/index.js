@@ -13,7 +13,7 @@ import Header from "../header";
 import PreventDoubleTapZoomButton from "../preventDoubleTapZoomButton";
 
 
-const EditItem = ({ onResetQuantity, onRemoveOrder, onUpdateOrder, onIncreaseQuantity, onReduceQuantity, onHeaderClose, scrollPosition ,width, activeItem }) => (
+const EditItem = ({ onResetQuantity, onRemoveOrder, onUpdateOrder, onIncreaseQuantity, onReduceQuantity, onHeaderClose, scrollPosition ,width, activeItem, orderedList }) => (
   <Flexbox flexDirection="column" className="AllContainer">
     <Flexbox flexDirection="column" className="ItemContainer">
       <Header onHeaderClose={onHeaderClose} scrollPosition={scrollPosition} width={width} title={activeItem.name}/>
@@ -36,7 +36,7 @@ const EditItem = ({ onResetQuantity, onRemoveOrder, onUpdateOrder, onIncreaseQua
       <Flexbox className="spacer">
       </Flexbox>
     </Flexbox>
-    <Footer onResetQuantity={onResetQuantity} onRemoveOrder={onRemoveOrder} onUpdateOrder={onUpdateOrder} orderedQty = {activeItem.newOrderQty} onIncreaseQuantity={onIncreaseQuantity} onReduceQuantity={onReduceQuantity} activeItem={activeItem}/>
+    <Footer onResetQuantity={onResetQuantity} onRemoveOrder={onRemoveOrder} onUpdateOrder={onUpdateOrder} orderedQty = {activeItem.newOrderQty} onIncreaseQuantity={onIncreaseQuantity} onReduceQuantity={onReduceQuantity} activeItem={activeItem} orderedList={orderedList}/>
   </Flexbox>
 )
 
@@ -55,6 +55,7 @@ EditItem.propTypes = {
     choice: PropTypes.arrayOf(PropTypes.object).isRequired,
     newOrderQty: PropTypes.number.isRequired,
   }).isRequired,
+  orderedList: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 
@@ -113,7 +114,7 @@ EachChoiceOrdered.propTypes = {
 }
 
 
-const Footer = ({ onResetQuantity, onRemoveOrder, onUpdateOrder, orderedQty, onIncreaseQuantity, onReduceQuantity, activeItem }) => (
+const Footer = ({ onResetQuantity, onRemoveOrder, onUpdateOrder, orderedQty, onIncreaseQuantity, onReduceQuantity, activeItem, orderedList }) => (
   <PreventDoubleTapZoomButton>
     <Flexbox flexDirection="column" className="editItemFooter" flexGrow={1}>
       <Flexbox className="editItemOrderQuantityContainer" justifyContent="center">
@@ -133,7 +134,7 @@ const Footer = ({ onResetQuantity, onRemoveOrder, onUpdateOrder, orderedQty, onI
         </Flexbox>
       </Flexbox>
       {
-        orderedQty>0? <Flexbox className="EditItemUpdateCart" onClick={() => onUpdateOrder(activeItem)} justifyContent="center"><Flexbox>UPDATE ORDER</Flexbox></Flexbox> : <Flexbox  className="EditItemRemoveCart" onClick={() => onRemoveOrder(activeItem)} justifyContent="center"><Flexbox>REMOVE ITEM</Flexbox></Flexbox>
+        orderedQty>0? <Flexbox className="EditItemUpdateCart" onClick={() => onUpdateOrder(activeItem)} justifyContent="center"><Flexbox>UPDATE ORDER</Flexbox></Flexbox> : <Flexbox  className="EditItemRemoveCart" onClick={() => onRemoveOrder(activeItem, orderedList)} justifyContent="center"><Flexbox>REMOVE ITEM</Flexbox></Flexbox>
       }
     </Flexbox>
   </PreventDoubleTapZoomButton>
@@ -151,6 +152,7 @@ Footer.propTypes = {
     choice: PropTypes.arrayOf(PropTypes.object).isRequired,
     newOrderQty: PropTypes.number.isRequired,
   }).isRequired,
+  orderedList: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
 /*

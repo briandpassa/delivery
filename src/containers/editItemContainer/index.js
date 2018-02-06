@@ -13,15 +13,16 @@ class EditItemContainer extends React.Component {
   }
 
   render() {
-    const { onResetQuantity, onRemoveOrder, onUpdateOrder, onIncreaseQuantity, onReduceQuantity, onHeaderClose, scrollPosition, dimensions, activeItem } = this.props;
+    const { onResetQuantity, onRemoveOrder, onUpdateOrder, onIncreaseQuantity, onReduceQuantity, onHeaderClose, scrollPosition, dimensions, activeItem, orderedList } = this.props;
     return (
-      <EditItem onResetQuantity={onResetQuantity} onRemoveOrder={onRemoveOrder} onUpdateOrder={onUpdateOrder} onIncreaseQuantity={onIncreaseQuantity} onReduceQuantity={onReduceQuantity} onHeaderClose={onHeaderClose} scrollPosition={scrollPosition} width={dimensions.width} activeItem = {activeItem}/>
+      <EditItem onResetQuantity={onResetQuantity} onRemoveOrder={onRemoveOrder} onUpdateOrder={onUpdateOrder} onIncreaseQuantity={onIncreaseQuantity} onReduceQuantity={onReduceQuantity} onHeaderClose={onHeaderClose} scrollPosition={scrollPosition} width={dimensions.width} activeItem = {activeItem} orderedList={orderedList}/>
     );
   }
 }
 
 const mapStateToProps = state => ({
   activeItem: state.activeItem,
+  orderedList: state.orderedList,
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({

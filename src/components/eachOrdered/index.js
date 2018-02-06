@@ -37,7 +37,7 @@ EachOrdered.propTypes = {
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     choice: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
-  }).isRequired
+  }).isRequired,
 }
 
 //

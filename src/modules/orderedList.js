@@ -58,8 +58,12 @@ export const onUpdateOrder = (activeItem) => {
   }
 }
 
-export const onRemoveOrder = (activeItem) => {
-  history.push('/');
+export const onRemoveOrder = (activeItem, orderedList) => {
+  if (orderedList.length > 1) {
+    history.goBack();
+  } else {
+    history.push('/');
+  }
   return dispatch => {
     dispatch({
       type: REMOVE_ORDER,
